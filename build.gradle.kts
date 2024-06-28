@@ -18,9 +18,14 @@ repositories {
 }
 
 dependencies {
+	implementation(files("vendored/fmjdbc.jar"))
 	implementation("org.springframework.boot:spring-boot-starter-jdbc")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+}
+
+tasks.withType<Jar> {
+    archiveFileName.set("${project.name}.jar")
 }
 
 tasks.withType<Test> {
