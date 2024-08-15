@@ -1,4 +1,4 @@
-package com.impressdesigns.alex;
+package com.impressdesigns.alex.orders;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -22,7 +22,7 @@ public class Order {
         return order_id;
     }
 
-    public String get_customer_purchase_order() {
+    public String getCustomer_purchase_order() {
         return customer_purchase_order;
     }
 }

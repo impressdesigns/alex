@@ -1,4 +1,4 @@
-package com.impressdesigns.alex;
+package com.impressdesigns.alex.orders;
 
 
 import org.springframework.data.repository.CrudRepository;
