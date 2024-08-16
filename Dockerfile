@@ -1,8 +1,5 @@
 FROM eclipse-temurin:21-jdk-alpine@sha256:511d5a9217ed753d9c099d3d753111d7f9e0e40550b860bceac042f4e55f715c as build
 
-ARG git_sha="development"
-ENV GIT_SHA=$git_sha
-
 WORKDIR /scratch
 
 COPY gradle gradle
