@@ -2,6 +2,7 @@ plugins {
     java
     id("org.springframework.boot") version "3.3.2"
     id("io.spring.dependency-management") version "1.1.6"
+    id ("io.sentry.jvm.gradle") version "4.11.0"
 }
 
 group = "com.impressdesigns"
@@ -32,4 +33,11 @@ tasks.withType<Jar> {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+sentry {
+    authToken.set(System.getenv("SENTRY_AUTH_TOKEN"))
+    org.set("impressdesigns")
+    projectName.set("alex")
+    includeSourceContext.set(true)
 }
